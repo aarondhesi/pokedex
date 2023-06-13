@@ -7,3 +7,6 @@
   src="src/assets/sprites/{pokemonID}.png"
   alt="An image of {pokemonName}."
 />
+
+<style>
+</style>
