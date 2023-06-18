@@ -33,8 +33,8 @@
     return colourType;
   }
 
-  export let pokemonType;
-  $: colourTypeList = generateColourTypeList(pokemonType);
+  export let type;
+  $: colourTypeList = generateColourTypeList(type);
 </script>
 
 <h2>Type</h2>

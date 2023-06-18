@@ -1,24 +1,24 @@
 <script>
   import PokedexEntry from "./lib/PokedexEntry.svelte";
   import NavigationBar from "./lib/NavigationBar.svelte";
-  import jsonData from "./data/pokemon.json";
+  import allData from "./data/pokemon.json";
   import getDataValues from "./scripts/getDataValues";
 
-  let pokemonIds = getDataValues(jsonData, "id");
-  let pokemonNames = getDataValues(jsonData, "name");
-  let selectedID = null;
+  let allNumbers = getDataValues(allData, "number");
+  let allNames = getDataValues(allData, "name");
+  let selectedNumber = null;
 
   function handlePokemonSelected(event) {
-    selectedID = event.detail;
+    selectedNumber = event.detail;
   }
 </script>
 
 <NavigationBar
-  pokemonIDs={pokemonIds}
-  {pokemonNames}
+  {allNumbers}
+  {allNames}
   on:pokemonSelected={handlePokemonSelected}
 />
 
-{#if selectedID !== null}
-  <PokedexEntry pokemonData={jsonData[selectedID - 1]} />
+{#if selectedNumber !== null}
+  <PokedexEntry data={allData[selectedNumber - 1]} />
 {/if}

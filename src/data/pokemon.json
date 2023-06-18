@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "number": 1,
     "name": "Bulbasaur",
     "category": "Seed Pokémon",
     "type": [
@@ -18,11 +18,11 @@
       "speed": 45
     },
     "ability": "Overgrow",
-    "prevolution id": null,
-    "evolution id": "2"
+    "prevolution number": null,
+    "evolution number": "2"
   },
   {
-    "id": 2,
+    "number": 2,
     "name": "Ivysaur",
     "category": "Seed Pokémon",
     "type": [
@@ -40,11 +40,11 @@
       "speed": 60
     },
     "ability": "Overgrow",
-    "prevolution id": "1",
-    "evolution id": "3"
+    "prevolution number": "1",
+    "evolution number": "3"
   },
   {
-    "id": 3,
+    "number": 3,
     "name": "Venusaur",
     "category": "Seed Pokémon",
     "type": [
@@ -62,7 +62,7 @@
       "speed": 80
     },
     "ability": "Overgrow",
-    "prevolution id": "3",
-    "evolution id": null
+    "prevolution number": "3",
+    "evolution number": null
   }
 ]

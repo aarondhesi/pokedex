@@ -1,23 +1,24 @@
 <script>
-  import generatePokemonNumber from "../scripts/generatePokemonNumber";
+  import generatePokedexNumberString from "../scripts/generatePokedexNumberString";
   import { createEventDispatcher } from "svelte";
-  export let pokemonIDs;
-  export let pokemonNames;
+  export let allNumbers;
+  export let allNames;
 
   const dispatch = createEventDispatcher();
 
-  function select(pokemonID) {
-    dispatch("pokemonSelected", pokemonID);
+  function select(number) {
+    dispatch("pokemonSelected", number);
   }
 </script>
 
 <nav>
   <ul>
-    {#each pokemonIDs as pokemonID}
+    {#each allNumbers as number}
       <li>
-        <a on:click={() => select(pokemonID)} href="#top"
-          >#{generatePokemonNumber(pokemonID)} {pokemonNames[pokemonID - 1]}</a
-        >
+        <a on:click={() => select(number)} href="#top">
+          {generatePokedexNumberString(number)}
+          {allNames[number - 1]}
+        </a>
       </li>
     {/each}
   </ul>
