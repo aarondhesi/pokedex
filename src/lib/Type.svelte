@@ -55,10 +55,8 @@
     width: 100px;
     padding: 5px;
     margin: 5px;
-    border: solid;
-    border-color: black;
     border-radius: 10px;
-    font-size: 16px;
+    color: white;
     text-align: center;
   }
 </style>
