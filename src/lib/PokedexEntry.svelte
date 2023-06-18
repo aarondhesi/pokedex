@@ -58,7 +58,7 @@
   main {
     display: grid;
     grid-template-areas:
-      'header header header header header'
-      'image category type height weight'
+      "header header header header header"
+      "image category type height weight";
   }
 </style>

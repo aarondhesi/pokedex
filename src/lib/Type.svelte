@@ -47,14 +47,18 @@
 <style>
   ul {
     list-style-type: none;
+    padding: 0px;
   }
 
   li {
+    float: left;
+    width: 100px;
     padding: 5px;
     margin: 5px;
     border: solid;
     border-color: black;
     border-radius: 10px;
     font-size: 16px;
+    text-align: center;
   }
 </style>
