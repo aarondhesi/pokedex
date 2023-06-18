@@ -4,5 +4,5 @@
 
 <div>
   <h2>Weight</h2>
-  <p>{weight} kg</p>
+  <p>{weight.toFixed(1)} kg</p>
 </div>

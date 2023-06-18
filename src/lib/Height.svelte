@@ -4,5 +4,5 @@
 
 <div>
   <h2>Height</h2>
-  <p>{height} m</p>
+  <p>{height.toFixed(1)} m</p>
 </div>
