@@ -38,7 +38,7 @@
 </script>
 
 <div>
-  <h2>Type:</h2>
+  <h2>Type</h2>
   <ul>
     {#each colourTypeList as colourType}
       <li style="background-color: {colourType.colour}">{colourType.type}</li>
@@ -52,7 +52,6 @@
   }
 
   li {
-    color: white;
     float: left;
     padding: 5px;
     margin: 5px;
