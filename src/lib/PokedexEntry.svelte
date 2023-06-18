@@ -60,5 +60,12 @@
     grid-template-areas:
       "header header header header header"
       "image category type height weight";
+    background-color: grey;
+    padding: 10px;
+    grid-gap: 10px;
+  }
+
+  main > div {
+    background-color: white;
   }
 </style>
