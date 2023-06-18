@@ -52,7 +52,6 @@
   }
 
   li {
-    float: left;
     padding: 5px;
     margin: 5px;
     border: solid;
