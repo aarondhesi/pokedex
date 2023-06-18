@@ -1,21 +1,68 @@
-{
-  "id": 1,
-  "name": "Bulbasaur",
-  "category": "Seed Pokémon",
-  "type": [
-    "Grass",
-    "Poison"
-  ],
-  "height": 0.7,
-  "weight": 6.9,
-  "base stats": {
-    "hp": 45,
-    "attack": 49,
-    "defense": 65,
-    "special attack": 65,
-    "special defense": 65,
-    "speed": 45
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "category": "Seed Pokémon",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "height": 0.7,
+    "weight": 6.9,
+    "base stats": {
+      "hp": 45,
+      "attack": 49,
+      "defense": 65,
+      "special attack": 65,
+      "special defense": 65,
+      "speed": 45
+    },
+    "ability": "Overgrow",
+    "prevolution id": null,
+    "evolution id": "2"
   },
-  "ability": "Overgrow",
-  "evolution id": "2"
-}
+  {
+    "id": 2,
+    "name": "Ivysaur",
+    "category": "Seed Pokémon",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "height": 1.0,
+    "weight": 13.0,
+    "base stats": {
+      "hp": 60,
+      "attack": 62,
+      "defense": 63,
+      "special attack": 80,
+      "special defense": 80,
+      "speed": 60
+    },
+    "ability": "Overgrow",
+    "prevolution id": "1",
+    "evolution id": "3"
+  },
+  {
+    "id": 3,
+    "name": "Venusaur",
+    "category": "Seed Pokémon",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "height": 2.0,
+    "weight": 100.0,
+    "base stats": {
+      "hp": 80,
+      "attack": 82,
+      "defense": 83,
+      "special attack": 100,
+      "special defense": 100,
+      "speed": 80
+    },
+    "ability": "Overgrow",
+    "prevolution id": "3",
+    "evolution id": null
+  }
+]
