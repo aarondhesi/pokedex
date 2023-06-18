@@ -6,9 +6,19 @@
 
   let pokemonIds = getDataValues(jsonData, "id");
   let pokemonNames = getDataValues(jsonData, "name");
-  let selectedID = 1;
+  let selectedID = null;
+
+  function handlePokemonSelected(event) {
+    selectedID = event.detail;
+  }
 </script>
 
-<NavigationBar pokemonIDs={pokemonIds} pokemonNames= {pokemonNames} />
+<NavigationBar
+  pokemonIDs={pokemonIds}
+  {pokemonNames}
+  on:pokemonSelected={handlePokemonSelected}
+/>
 
-<PokedexEntry pokemonData={jsonData[selectedID - 1]} />
+{#if selectedID !== null}
+  <PokedexEntry pokemonData={jsonData[selectedID - 1]} />
+{/if}
