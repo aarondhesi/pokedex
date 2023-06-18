@@ -5,27 +5,27 @@
   import Weight from "./Weight.svelte";
   import Image from "./Image.svelte";
   import Type from "./Type.svelte";
-  export let data;
+  export let pokemon;
 </script>
 
 <main>
   <div class="item1">
-    <Heading number={data.number} name={data.name} />
+    <Heading number={pokemon.number} name={pokemon.name} />
   </div>
   <div class="item2">
-    <Image id={data.number} name={data.name} />
+    <Image id={pokemon.number} name={pokemon.name} />
   </div>
   <div class="item3">
-    <Category category={data.category} />
+    <Category category={pokemon.category} />
   </div>
   <div class="item4">
-    <Type type={data.type} />
+    <Type type={pokemon.type} />
   </div>
   <div class="item5">
-    <Height height={data.height} />
+    <Height height={pokemon.height} />
   </div>
   <div class="item6">
-    <Weight weight={data.weight} />
+    <Weight weight={pokemon.weight} />
   </div>
 </main>
 

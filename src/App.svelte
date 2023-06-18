@@ -1,11 +1,11 @@
 <script>
   import PokedexEntry from "./lib/PokedexEntry.svelte";
   import NavigationBar from "./lib/NavigationBar.svelte";
-  import allData from "./data/pokemon.json";
+  import allPokemon from "./data/pokemon.json";
   import getDataValues from "./scripts/getDataValues";
 
-  let allNumbers = getDataValues(allData, "number");
-  let allNames = getDataValues(allData, "name");
+  let allNumbers = getDataValues(allPokemon, "number");
+  let allNames = getDataValues(allPokemon, "name");
   let selectedNumber = null;
 
   function handlePokemonSelected(event) {
@@ -20,5 +20,5 @@
 />
 
 {#if selectedNumber !== null}
-  <PokedexEntry data={allData[selectedNumber - 1]} />
+  <PokedexEntry pokemon={allPokemon[selectedNumber - 1]} />
 {/if}
