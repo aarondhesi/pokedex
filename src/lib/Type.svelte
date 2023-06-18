@@ -37,14 +37,12 @@
   $: colourTypeList = generateColourTypeList(pokemonType);
 </script>
 
-<div>
-  <h2>Type</h2>
-  <ul>
-    {#each colourTypeList as colourType}
-      <li style="background-color: {colourType.colour}">{colourType.type}</li>
-    {/each}
-  </ul>
-</div>
+<h2>Type</h2>
+<ul>
+  {#each colourTypeList as colourType}
+    <li style="background-color: {colourType.colour}">{colourType.type}</li>
+  {/each}
+</ul>
 
 <style>
   ul {
@@ -57,5 +55,6 @@
     border: solid;
     border-color: black;
     border-radius: 10px;
+    font-size: 16px;
   }
 </style>
