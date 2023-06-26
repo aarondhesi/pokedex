@@ -17,6 +17,7 @@
     height: 100px;
     padding-top: 5px;
     margin: 5px;
+    transition: 0.25s;
   }
 
   :global(body.dark-mode) div {
