@@ -25,7 +25,6 @@
   }
 
   p {
-    color: #0e0e12;
     text-align: center;
     margin-top: 10px;
   }
