@@ -2,15 +2,9 @@
   import allPokemon from "./data/pokemon.json";
   import getDataValues from "./scripts/getDataValues";
   import NavTile from "./lib/NavTile.svelte";
-  import { each } from "svelte/internal";
 
   let allNumbers = getDataValues(allPokemon, "number");
   let allNames = getDataValues(allPokemon, "name");
-  let selectedNumber = null;
-
-  function handlePokemonSelected(event) {
-    selectedNumber = event.detail;
-  }
 </script>
 
 <div class="flex-container">
