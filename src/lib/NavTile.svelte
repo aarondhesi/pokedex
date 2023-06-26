@@ -1,6 +1,4 @@
 <script>
-  import generatePokemonNumber from "../scripts/generatePokedexNumberString";
-
   export let number;
   export let name;
 </script>
@@ -17,7 +15,7 @@
     height: 100px;
     padding-top: 5px;
     margin: 5px;
-    transition: 0.25s;
+    transition: 0.3s;
   }
 
   :global(body.dark-mode) div {
