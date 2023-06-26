@@ -11,12 +11,16 @@
 </div>
 
 <style>
-  div {
+  :global(body) div {
     background-color: #c1c1d2;
     width: 100px;
     height: 100px;
     padding-top: 5px;
     margin: 5px;
+  }
+
+  :global(body.dark-mode) div {
+    background-color: #333346;
   }
 
   img {

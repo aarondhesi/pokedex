@@ -1,6 +1,12 @@
-body {
+:global(body) {
   font-family: Roboto;
   font-size: 16px;
   background-color: #e6e6ec;
   color: #1a1a24;
+}
+
+:global(body.dark-mode)
+{
+  background-color: #1a1a24;
+  color: #e6e6ec;
 }
