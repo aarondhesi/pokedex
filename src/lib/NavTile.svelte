@@ -20,6 +20,7 @@
     font-family: monospace;
     font-size: 16px;
   }
+
   .nav-tile:hover {
     background-color: #a6a6bf;
   }
@@ -28,6 +29,7 @@
     background-color: #333346;
     color: #e6e6ec;
   }
+  
   :global(body.dark-mode) .nav-tile:hover {
     background-color: #535373;
   }
@@ -41,5 +43,4 @@
     text-align: center;
     margin-top: 10px;
   }
-
 </style>
