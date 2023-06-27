@@ -3,29 +3,28 @@
   export let name;
 </script>
 
-<div>
+<div class="nav-tile">
   <img src="src\assets\sprites\{number}.png" alt={name} />
   <p>{name}</p>
 </div>
 
 <style>
-  :global(body) div {
+  .nav-tile {
     background-color: #c1c1d2;
     width: 100px;
     height: 100px;
     padding-top: 5px;
     margin: 5px;
-    transition: 0.2s;
+    transition-duration: 0.2s;
   }
-
-  :global(body) div:hover {
+  .nav-tile:hover {
     background-color: #a6a6bf;
   }
 
-  :global(body.dark-mode) div {
+  :global(.dark-mode) .nav-tile {
     background-color: #333346;
   }
-  :global(body.dark-mode) div:hover {
+  :global(.dark-mode) .nav-tile:hover {
     background-color: #535373;
   }
 
@@ -38,4 +37,5 @@
     text-align: center;
     margin-top: 10px;
   }
+
 </style>

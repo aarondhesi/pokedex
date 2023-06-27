@@ -10,7 +10,7 @@
 
 <DarkModeToggle>Toggle</DarkModeToggle>
 
-<div class="flex-container">
+<div class="tile-grid">
   {#each allNumbers as number, i}
     <div>
       <NavTile {number} name={allNames[i]} />
@@ -19,19 +19,20 @@
 </div>
 
 <style>
-  .flex-container {
+  .tile-grid {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
   }
 
+  
   :global(body) {
-    font-family: Roboto;
-    font-size: 16px;
     background-color: #e6e6ec;
+    transition-duration: 0.2s;
     color: #0e0e12;
-    transition: 0.2s;
+    font-family: monospace;
+    font-size: 16px;
   }
 
   :global(body.dark-mode) {
