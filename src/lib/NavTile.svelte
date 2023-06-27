@@ -15,16 +15,20 @@
     height: 100px;
     padding-top: 5px;
     margin: 5px;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
+    color: #0e0e12;
+    font-family: monospace;
+    font-size: 16px;
   }
   .nav-tile:hover {
     background-color: #a6a6bf;
   }
 
-  :global(.dark-mode) .nav-tile {
+  :global(body.dark-mode) .nav-tile {
     background-color: #333346;
+    color: #e6e6ec;
   }
-  :global(.dark-mode) .nav-tile:hover {
+  :global(body.dark-mode) .nav-tile:hover {
     background-color: #535373;
   }
 

@@ -29,14 +29,10 @@
   
   :global(body) {
     background-color: #e6e6ec;
-    transition-duration: 0.2s;
-    color: #0e0e12;
-    font-family: monospace;
-    font-size: 16px;
+    transition-duration: 0.3s;
   }
 
   :global(body.dark-mode) {
     background-color: #0e0e12;
-    color: #e6e6ec;
   }
 </style>
