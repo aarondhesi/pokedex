@@ -31,7 +31,7 @@
     font-size: 16px;
     background-color: #e6e6ec;
     color: #0e0e12;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   :global(body.dark-mode) {
