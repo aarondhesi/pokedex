@@ -4,6 +4,13 @@
   import allPokemon from "./data/pokemon.json";
 </script>
 
-<DarkModeToggle>Toggle</DarkModeToggle>
-<NavTileGrid pokemon={allPokemon} />
+<div class="grid-container">
+  <DarkModeToggle>Toggle</DarkModeToggle>
+  <NavTileGrid pokemon={allPokemon} />
+</div>
 
+<style>
+  .grid-container {
+    display: grid;
+  }
+</style>

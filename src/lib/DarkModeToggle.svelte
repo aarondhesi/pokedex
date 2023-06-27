@@ -28,8 +28,8 @@
 </div>
 
 <style>
-  .wrapper {
-    transform: scale(1);
+  .wrapper{
+    width: auto;
   }
 
   #hide-checkbox {
@@ -40,8 +40,8 @@
 
   .toggle {
     position: relative;
+    float: right;
     cursor: pointer;
-    display: inline-block;
     width: 100px;
     height: 50px;
     background: #211042;
