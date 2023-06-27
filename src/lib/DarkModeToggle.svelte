@@ -1,10 +1,10 @@
 <script>
-  function toggle() {
+  function toggleDarkMode() {
     window.document.body.classList.toggle("dark-mode");
   }
 </script>
 
-<button on:click={toggle}>
+<button on:click={toggleDarkMode}>
   <slot />
 </button>
 

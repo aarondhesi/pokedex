@@ -26,13 +26,4 @@
     max-width: 1100px;
   }
 
-  
-  :global(body) {
-    background-color: #e6e6ec;
-    transition-duration: 0.3s;
-  }
-
-  :global(body.dark-mode) {
-    background-color: #0e0e12;
-  }
 </style>
