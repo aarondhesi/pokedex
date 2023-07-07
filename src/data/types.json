@@ -1,0 +1,74 @@
+[
+  {
+    "type": "Normal",
+    "colour": "#A8A77A"
+  },
+  {
+    "type": "Fire",
+    "colour": "#EE8130"
+  },
+  {
+    "type": "Water",
+    "colour": "#6390F0"
+  },
+  {
+    "type": "Electric",
+    "colour": "#F7D02C"
+  },
+  {
+    "type": "Grass",
+    "colour": "#7AC74C"
+  },
+  {
+    "type": "Ice",
+    "colour": "#96D9D6"
+  },
+  {
+    "type": "Fighting",
+    "colour": "#C22E28"
+  },
+  {
+    "type": "Poison",
+    "colour": "#A33EA1"
+  },
+  {
+    "type": "Ground",
+    "colour": "#E2BF65"
+  },
+  {
+    "type": "Flying",
+    "colour": "#A98FF3"
+  },
+  {
+    "type": "Psychic",
+    "colour": "#F95587"
+  },
+  {
+    "type": "Bug",
+    "colour": "#A6B91A"
+  },
+  {
+    "type": "Rock",
+    "colour": "#B6A136"
+  },
+  {
+    "type": "Ghost",
+    "colour": "#735797"
+  },
+  {
+    "type": "Dragon",
+    "colour": "#6F35FC"
+  },
+  {
+    "type": "Dark",
+    "colour": "#705746"
+  },
+  {
+    "type": "Steel",
+    "colour": "#B7B7CE"
+  },
+  {
+    "type": "Fairy",
+    "colour": "#D685AD"
+  }
+]
