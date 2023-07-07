@@ -5,12 +5,18 @@
 </script>
 
 <div class="grid-container">
-  <DarkModeToggle>Toggle</DarkModeToggle>
+  <div class="header">
+    <DarkModeToggle>Toggle</DarkModeToggle>
+  </div>
   <NavTileGrid pokemon={allPokemon} />
 </div>
 
 <style>
   .grid-container {
     display: grid;
+  }
+  
+  .header {
+    height: 100px;
   }
 </style>
