@@ -6,7 +6,7 @@
 
 <div class="grid-container">
   <div class="header">
-    <DarkModeToggle>Toggle</DarkModeToggle>
+    <DarkModeToggle />
   </div>
   <NavTileGrid pokemon={allPokemon} />
 </div>
