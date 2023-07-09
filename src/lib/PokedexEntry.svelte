@@ -25,14 +25,13 @@
 <style>
   div {
     margin: 5px;
-    background-color: #a6a6bf;
+    background-color: #8080a4;
     font-family: monospace;
     font-size: 16px;
     color: #0e0e12;
   }
 
   :global(body.dark-mode) div {
-    background-color: #535373;
     color: #e6e6ec;
   }
   
