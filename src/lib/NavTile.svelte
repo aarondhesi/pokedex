@@ -1,11 +1,10 @@
 <script>
-  export let number;
-  export let name;
+  export let pokemon
 </script>
 
 <div class="nav-tile">
-  <img src="src\assets\sprites\{number}.png" alt={name} />
-  <p>{name}</p>
+  <img src="src\assets\sprites\{pokemon.number}.png" alt={pokemon.name} />
+  <p>{pokemon.name}</p>
 </div>
 
 <style>

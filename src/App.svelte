@@ -9,14 +9,14 @@
   <div class="header">
     <DarkModeToggle />
   </div>
-  <NavTileGrid pokemon={allPokemon} />
+  <NavTileGrid {allPokemon} />
 </div>
 
 <style>
   .grid-container {
     display: grid;
   }
-  
+
   .header {
     height: 100px;
   }

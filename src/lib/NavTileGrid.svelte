@@ -1,16 +1,13 @@
 <script>
   import NavTile from "./NavTile.svelte";
-  import getDataValues from "../scripts/getDataValues";
 
-  export let pokemon;
-  let allNumbers = getDataValues(pokemon, "number");
-  let allNames = getDataValues(pokemon, "name");
+  export let allPokemon;
 </script>
 
 <div class="tile-grid">
-  {#each allNumbers as number, i}
+  {#each allPokemon as pokemon}
     <div>
-      <NavTile {number} name={allNames[i]} />
+      <NavTile {pokemon} />
     </div>
   {/each}
 </div>
