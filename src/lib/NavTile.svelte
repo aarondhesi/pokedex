@@ -22,38 +22,38 @@
 
 <style>
   .nav-tile {
-    background-color: #c1c1d2;
+    background-color: #cdba94;
     border: none;
     width: 100px;
     height: 100px;
     padding-top: 5px;
     margin: 5px;
     transition-duration: 0.3s;
-    color: #0e0e12;
+    color: #292418;
     font-family: monospace;
     font-size: 16px;
   }
 
   .nav-tile:hover {
-    background-color: #a6a6bf;
+    background-color: #bda583;
   }
 
   :global(body.dark-mode) .nav-tile {
-    background-color: #333346;
-    color: #e6e6ec;
+    background-color: #524839;
+    color: #e6ceac;
   }
 
   :global(body.dark-mode) .nav-tile:hover {
-    background-color: #535373;
+    background-color: #73654a;
   }
 
   .nav-tile.active {
-    background-color: #8080a4;
+    background-color: #a48d6a;
     transition-duration: 0s;
   }
 
   :global(body.dark-mode) .nav-tile.active {
-    background-color: #8080a4;
+    background-color: #8b7d62;
     transition-duration: 0s;
   }
 

@@ -19,7 +19,7 @@
 
 <style>
   p {
-    color: #0e0e12;
+    color: #292418;
     font-family: monospace;
     font-size: 16px;
     width: 100px;
