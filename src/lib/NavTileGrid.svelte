@@ -6,7 +6,6 @@
   export let allPokemon;
 
   const numberOfPokemon = allPokemon.length;
-  console.log(numberOfPokemon)
   let tileGridWidth;
   let tilesInRow;
   let selectedPokemonNumber = 0;
@@ -27,7 +26,10 @@
     if (selectedPokemonNumber === 0) {
       entryPosition = 0;
     } else {
-      entryPosition = Math.min(numberOfPokemon, Math.ceil(selectedPokemonNumber / tilesInRow) * tilesInRow);
+      entryPosition = Math.min(
+        numberOfPokemon,
+        Math.ceil(selectedPokemonNumber / tilesInRow) * tilesInRow
+      );
     }
   }
 
@@ -45,14 +47,16 @@
     updateSelectedPokemonNumber(event);
     updateEntryPosition();
   }
-
 </script>
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
     <NavTile {pokemon} on:click={handleClick} {selectedPokemonNumber} />
     {#if entryPosition === pokemon.number}
-      <PokedexEntry pokemon={allPokemon[selectedPokemonNumber - 1]} {tileGridWidth} />
+      <PokedexEntry
+        pokemon={allPokemon[selectedPokemonNumber - 1]}
+        {tileGridWidth}
+      />
     {/if}
   {/each}
 </div>

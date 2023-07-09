@@ -35,5 +35,4 @@
     background-color: #8b7d62;
     color: #e6ceac;
   }
-  
 </style>

@@ -5,7 +5,7 @@
 </script>
 
 <div class="wrapper">
-  <input type="checkbox" id="hide-checkbox" on:click={toggleDarkMode}/>
+  <input type="checkbox" id="hide-checkbox" on:click={toggleDarkMode} />
   <label for="hide-checkbox" class="toggle">
     <span class="toggle-button">
       <span class="crater crater-1" />
@@ -28,7 +28,7 @@
 </div>
 
 <style>
-  .wrapper{
+  .wrapper {
     width: auto;
   }
 
