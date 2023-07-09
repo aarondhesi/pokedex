@@ -6,7 +6,7 @@
   export let allPokemon;
 
   let tileGridWidth;
-  let selectedPokemon = null;
+  let selectedPokemonNumber = 0;
 
   onMount(() => {
     updatetileGridWidth();
@@ -18,12 +18,12 @@
   }
 
   function handleClick(event) {
-    let clickedPokemon = event.detail.object;
+    let clickedPokemonNumber = event.detail.pokemonNumber;
 
-    if (JSON.stringify(clickedPokemon) === JSON.stringify(selectedPokemon)) {
-      selectedPokemon = null;
+    if (clickedPokemonNumber === selectedPokemonNumber) {
+      selectedPokemonNumber = 0;
     } else {
-      selectedPokemon = clickedPokemon;
+      selectedPokemonNumber = clickedPokemonNumber;
     }
   }
 </script>
@@ -31,7 +31,7 @@
 <div class="tile-grid">
   {#each allPokemon as pokemon}
     <NavTile {pokemon} on:click={handleClick} />
-    {#if pokemon.number === 3}
+    {#if selectedPokemonNumber === pokemon.number}
       <PokedexEntry {pokemon} {tileGridWidth} />
     {/if}
   {/each}

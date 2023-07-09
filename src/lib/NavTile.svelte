@@ -5,7 +5,7 @@
 
   function selectPokemon() {
     dispatch("click", {
-      object: pokemon
+      pokemonNumber: pokemon.number
     });
   }
 </script>
