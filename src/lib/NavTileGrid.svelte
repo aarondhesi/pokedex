@@ -6,6 +6,7 @@
   export let allPokemon;
 
   let tileGridWidth;
+  let tilesInRow;
   let selectedPokemonNumber = 0;
 
   onMount(() => {
@@ -15,6 +16,7 @@
 
   function updatetileGridWidth() {
     tileGridWidth = document.querySelector(".tile-grid").clientWidth;
+    tilesInRow = Math.floor(tileGridWidth / 110);
   }
 
   function handleClick(event) {
