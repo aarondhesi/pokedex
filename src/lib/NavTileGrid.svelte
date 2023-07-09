@@ -8,11 +8,11 @@
   let tileGridWidth;
 
   onMount(() => {
-    updateEntryWidth();
-    window.addEventListener("resize", updateEntryWidth);
+    updatetileGridWidth();
+    window.addEventListener("resize", updatetileGridWidth);
   });
 
-  function updateEntryWidth() {
+  function updatetileGridWidth() {
     tileGridWidth = document.querySelector(".tile-grid").clientWidth;
   }
 </script>
