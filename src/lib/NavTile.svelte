@@ -16,7 +16,7 @@
   class="nav-tile {pokemon.number === selectedPokemonNumber ? 'active' : ''}"
   on:click={selectPokemon}
 >
-  <img src="src\assets\sprites\{pokemon.number}.png" alt={pokemon.name} />
+  <img src="/sprites/{pokemon.number}.png" alt={pokemon.name} />
   <p>{pokemon.name}</p>
 </button>
 
