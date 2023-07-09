@@ -1,15 +1,22 @@
 <script>
-  export let pokemon
+  import { createEventDispatcher } from "svelte";
+  export let pokemon;
+  const dispatch = createEventDispatcher();
+
+  function selectPokemon() {
+    console.log("hi");
+  }
 </script>
 
-<div class="nav-tile">
+<button class="nav-tile" on:click={selectPokemon}>
   <img src="src\assets\sprites\{pokemon.number}.png" alt={pokemon.name} />
   <p>{pokemon.name}</p>
-</div>
+</button>
 
 <style>
   .nav-tile {
     background-color: #c1c1d2;
+    border: none;
     width: 100px;
     height: 100px;
     padding-top: 5px;
@@ -28,7 +35,7 @@
     background-color: #333346;
     color: #e6e6ec;
   }
-  
+
   :global(body.dark-mode) .nav-tile:hover {
     background-color: #535373;
   }
