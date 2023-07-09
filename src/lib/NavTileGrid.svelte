@@ -1,15 +1,27 @@
 <script>
+  import { onMount } from "svelte";
   import NavTile from "./NavTile.svelte";
   import PokedexEntry from "./PokedexEntry.svelte";
 
   export let allPokemon;
+
+  let tileGridWidth;
+
+  onMount(() => {
+    updateEntryWidth();
+    window.addEventListener("resize", updateEntryWidth);
+  });
+
+  function updateEntryWidth() {
+    tileGridWidth = document.querySelector(".tile-grid").clientWidth;
+  }
 </script>
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
     <NavTile {pokemon} />
     {#if pokemon.number === 3}
-      <PokedexEntry {pokemon} />
+      <PokedexEntry {pokemon} {tileGridWidth} />
     {/if}
   {/each}
 </div>
@@ -20,6 +32,5 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
-    background-color: black;
   }
 </style>
