@@ -17,8 +17,8 @@
   {#each pokemon.type as type}
     <Type {type} />
   {/each}
-  <p>{pokemon.height} m</p>
-  <p>{pokemon.weight} kg</p>
+  <p>Height: {pokemon.height} m</p>
+  <p>Weight: {pokemon.weight} kg</p>
   <p>Ability: {pokemon.ability}</p>
 </div>
 
@@ -28,5 +28,12 @@
     background-color: #a6a6bf;
     font-family: monospace;
     font-size: 16px;
+    color: #0e0e12;
   }
+
+  :global(body.dark-mode) div {
+    background-color: #535373;
+    color: #e6e6ec;
+  }
+  
 </style>
