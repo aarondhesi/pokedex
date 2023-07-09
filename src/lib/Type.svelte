@@ -12,14 +12,14 @@
   }
 
   export let type;
-  let colour = getTypeColour(type);
+  $: colour = getTypeColour(type);
 </script>
 
 <p style="background-color: {colour}">{type}</p>
 
 <style>
   p {
-    color: black;
+    color: #0e0e12;
     font-family: monospace;
     font-size: 16px;
     width: 100px;
