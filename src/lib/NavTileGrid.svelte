@@ -6,9 +6,7 @@
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
-    <div>
-      <NavTile {pokemon} />
-    </div>
+    <NavTile {pokemon} />
   {/each}
 </div>
 
