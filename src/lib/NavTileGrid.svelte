@@ -8,6 +8,7 @@
   let tileGridWidth;
   let tilesInRow;
   let selectedPokemonNumber = 0;
+  let entryPosition = 0;
 
   onMount(() => {
     updatetileGridWidth();
@@ -17,9 +18,19 @@
   function updatetileGridWidth() {
     tileGridWidth = document.querySelector(".tile-grid").clientWidth;
     tilesInRow = Math.floor(tileGridWidth / 110);
+    updateEntryPosition();
   }
 
-  function handleClick(event) {
+  function updateEntryPosition() {
+    if (selectedPokemonNumber === 0) {
+      entryPosition = 0;
+    } else {
+      entryPosition =
+        Math.ceil(selectedPokemonNumber / tilesInRow) * tilesInRow;
+    }
+  }
+
+  function updateSelectedPokemonNumber(event) {
     let clickedPokemonNumber = event.detail.pokemonNumber;
 
     if (clickedPokemonNumber === selectedPokemonNumber) {
@@ -28,13 +39,19 @@
       selectedPokemonNumber = clickedPokemonNumber;
     }
   }
+
+  function handleClick(event) {
+    updateSelectedPokemonNumber(event);
+    updateEntryPosition();
+  }
+
 </script>
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
     <NavTile {pokemon} on:click={handleClick} {selectedPokemonNumber} />
-    {#if selectedPokemonNumber === pokemon.number}
-      <PokedexEntry {pokemon} {tileGridWidth} />
+    {#if entryPosition === pokemon.number}
+      <PokedexEntry pokemon={allPokemon[selectedPokemonNumber - 1]} {tileGridWidth} />
     {/if}
   {/each}
 </div>
