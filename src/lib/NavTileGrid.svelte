@@ -32,7 +32,7 @@
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
-    <NavTile {pokemon} on:click={handleClick} />
+    <NavTile {pokemon} on:click={handleClick} {selectedPokemonNumber} />
     {#if selectedPokemonNumber === pokemon.number}
       <PokedexEntry {pokemon} {tileGridWidth} />
     {/if}

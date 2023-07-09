@@ -1,16 +1,21 @@
 <script>
   import { createEventDispatcher } from "svelte";
   export let pokemon;
+  export let selectedPokemonNumber;
+
   const dispatch = createEventDispatcher();
 
   function selectPokemon() {
     dispatch("click", {
-      pokemonNumber: pokemon.number
+      pokemonNumber: pokemon.number,
     });
   }
 </script>
 
-<button class="nav-tile" on:click={selectPokemon}>
+<button
+  class="nav-tile {pokemon.number === selectedPokemonNumber ? 'active' : ''}"
+  on:click={selectPokemon}
+>
   <img src="src\assets\sprites\{pokemon.number}.png" alt={pokemon.name} />
   <p>{pokemon.name}</p>
 </button>
@@ -40,6 +45,16 @@
 
   :global(body.dark-mode) .nav-tile:hover {
     background-color: #535373;
+  }
+
+  .nav-tile.active {
+    background-color: #8080a4;
+    transition-duration: 0s;
+  }
+
+  :global(body.dark-mode) .nav-tile.active {
+    background-color: #8080a4;
+    transition-duration: 0s;
   }
 
   img {
