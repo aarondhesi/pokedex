@@ -5,6 +5,8 @@
 
   export let allPokemon;
 
+  const numberOfPokemon = allPokemon.length;
+  console.log(numberOfPokemon)
   let tileGridWidth;
   let tilesInRow;
   let selectedPokemonNumber = 0;
@@ -25,8 +27,7 @@
     if (selectedPokemonNumber === 0) {
       entryPosition = 0;
     } else {
-      entryPosition =
-        Math.ceil(selectedPokemonNumber / tilesInRow) * tilesInRow;
+      entryPosition = Math.min(numberOfPokemon, Math.ceil(selectedPokemonNumber / tilesInRow) * tilesInRow);
     }
   }
 
