@@ -4,7 +4,7 @@
   import Type from "./Type.svelte";
 </script>
 
-<main>
+<div>
   <p>{generatePokemonNumber(pokemon.number)} {pokemon.name}</p>
   <p>Category: {pokemon.category}</p>
   {#each pokemon.type as type}
@@ -13,12 +13,11 @@
   <p>{pokemon.height} m</p>
   <p>{pokemon.weight} kg</p>
   <p>Ability: {pokemon.ability}</p>
-</main>
+</div>
 
 <style>
-  main {
-    margin: auto;
-    max-width: 1090px;
+  div {
+    margin: 5px;
     background-color: #a6a6bf;
     font-family: monospace;
     font-size: 16px;
