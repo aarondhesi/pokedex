@@ -6,6 +6,7 @@
   export let allPokemon;
 
   let tileGridWidth;
+  let selectedPokemon = null;
 
   onMount(() => {
     updatetileGridWidth();
@@ -15,11 +16,21 @@
   function updatetileGridWidth() {
     tileGridWidth = document.querySelector(".tile-grid").clientWidth;
   }
+
+  function handleClick(event) {
+    let clickedPokemon = event.detail.object;
+
+    if (JSON.stringify(clickedPokemon) === JSON.stringify(selectedPokemon)) {
+      selectedPokemon = null;
+    } else {
+      selectedPokemon = clickedPokemon;
+    }
+  }
 </script>
 
 <div class="tile-grid">
   {#each allPokemon as pokemon}
-    <NavTile {pokemon} />
+    <NavTile {pokemon} on:click={handleClick} />
     {#if pokemon.number === 3}
       <PokedexEntry {pokemon} {tileGridWidth} />
     {/if}

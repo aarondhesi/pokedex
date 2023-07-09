@@ -4,7 +4,9 @@
   const dispatch = createEventDispatcher();
 
   function selectPokemon() {
-    console.log("hi");
+    dispatch("click", {
+      object: pokemon
+    });
   }
 </script>
 
