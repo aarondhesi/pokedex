@@ -13,14 +13,21 @@
 
 <div class="container" style="width: {width}">
   <div class="contents">
-    <p>{generatePokemonNumber(pokemon.number)} {pokemon.name}</p>
-    <p>Category: {pokemon.category}</p>
-    {#each pokemon.type as type}
-      <Type {type} />
-    {/each}
-    <p>Height: {pokemon.height} m</p>
-    <p>Weight: {pokemon.weight} kg</p>
-    <p>Ability: {pokemon.ability}</p>
+    <div class="image-name">
+      <p>{generatePokemonNumber(pokemon.number)} {pokemon.name}</p>
+      <img src="sprites/{pokemon.number}.png" alt={pokemon.name} />
+    </div>
+    <div class="types">
+      {#each pokemon.type as type}
+        <Type {type} />
+      {/each}
+    </div>
+    <div class="data">
+      <p>Category: {pokemon.category}</p>
+      <p>Height: {pokemon.height} m</p>
+      <p>Weight: {pokemon.weight} kg</p>
+      <p>Ability: {pokemon.ability}</p>
+    </div>
   </div>
 </div>
 
@@ -40,5 +47,22 @@
 
   .contents {
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .image-name {
+    width: 140px;
+    text-align: center;
+  }
+
+  .data {
+    width: 300px;
+  }
+
+  img {
+    display: block;
+    margin: auto;
   }
 </style>
