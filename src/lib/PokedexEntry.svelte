@@ -11,19 +11,21 @@
   }
 </script>
 
-<div style="width: {width}">
-  <p>{generatePokemonNumber(pokemon.number)} {pokemon.name}</p>
-  <p>Category: {pokemon.category}</p>
-  {#each pokemon.type as type}
-    <Type {type} />
-  {/each}
-  <p>Height: {pokemon.height} m</p>
-  <p>Weight: {pokemon.weight} kg</p>
-  <p>Ability: {pokemon.ability}</p>
+<div class="container" style="width: {width}">
+  <div class="contents">
+    <p>{generatePokemonNumber(pokemon.number)} {pokemon.name}</p>
+    <p>Category: {pokemon.category}</p>
+    {#each pokemon.type as type}
+      <Type {type} />
+    {/each}
+    <p>Height: {pokemon.height} m</p>
+    <p>Weight: {pokemon.weight} kg</p>
+    <p>Ability: {pokemon.ability}</p>
+  </div>
 </div>
 
 <style>
-  div {
+  .container {
     margin: 5px;
     background-color: #a48d6a;
     font-family: monospace;
@@ -31,8 +33,12 @@
     color: #292418;
   }
 
-  :global(body.dark-mode) div {
+  :global(body.dark-mode).container {
     background-color: #8b7d62;
     color: #e6ceac;
+  }
+
+  .contents {
+    margin: 10px;
   }
 </style>
