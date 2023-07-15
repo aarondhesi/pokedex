@@ -40,7 +40,7 @@
     color: #292418;
   }
 
-  :global(body.dark-mode).container {
+  :global(body.dark-mode) .container {
     background-color: #8b7d62;
     color: #e6ceac;
   }
