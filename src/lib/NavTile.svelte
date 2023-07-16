@@ -29,9 +29,6 @@
     padding-top: 5px;
     margin: 5px;
     transition-duration: 0.3s;
-    color: #292418;
-    font-family: monospace;
-    font-size: 16px;
   }
 
   .nav-tile:hover {
@@ -40,7 +37,6 @@
 
   :global(body.dark-mode) .nav-tile {
     background-color: #524839;
-    color: #e6ceac;
   }
 
   :global(body.dark-mode) .nav-tile:hover {
@@ -64,6 +60,14 @@
 
   p {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #292418;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 0px;
+  }
+
+  :global(body.dark-mode) p {
+    color: #e6ceac;
   }
 </style>
