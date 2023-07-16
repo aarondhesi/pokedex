@@ -66,7 +66,7 @@
   }
 
   .data {
-    width: 250px;
+    width: 200px;
   }
 
   img {
