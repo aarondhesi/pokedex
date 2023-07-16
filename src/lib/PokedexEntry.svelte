@@ -2,6 +2,7 @@
   export let pokemon;
   export let tileGridWidth;
   import generatePokemonNumber from "../scripts/generatePokedexNumberString";
+  import StatBar from "./StatBar.svelte";
   import Type from "./Type.svelte";
 
   let width;
@@ -10,6 +11,8 @@
     width = ((tileGridWidthRounded / tileGridWidth) * 110).toString() + "%";
   }
 </script>
+
+<!-- REORDER stats -->
 
 <div class="container" style="width: {width}">
   <div class="contents">
@@ -23,10 +26,15 @@
       {/each}
     </div>
     <div class="data">
-      <p>Category: {pokemon.category}</p>
+      <p>{pokemon.category}</p>
       <p>Height: {pokemon.height} m</p>
       <p>Weight: {pokemon.weight} kg</p>
       <p>Ability: {pokemon.ability}</p>
+    </div>
+    <div class="stats">
+      {#each Object.entries(pokemon["base stats"]) as [statName, statValue]}
+        <StatBar {statName} {statValue} />
+      {/each}
     </div>
   </div>
 </div>
@@ -58,11 +66,18 @@
   }
 
   .data {
-    width: 300px;
+    width: 250px;
   }
 
   img {
     display: block;
     margin: auto;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin-bottom: 20px;
   }
 </style>
