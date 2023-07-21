@@ -12,8 +12,6 @@
   }
 </script>
 
-<!-- REORDER stats -->
-
 <div class="container" style="width: {width}">
   <div class="contents">
     <div class="image-name">
@@ -32,9 +30,20 @@
       <p>Ability: {pokemon.ability}</p>
     </div>
     <div class="stats">
-      {#each Object.entries(pokemon["base stats"]) as [statName, statValue]}
-        <StatBar {statName} {statValue} />
-      {/each}
+      <div>
+        {#each Object.entries(pokemon["base stats"]) as [statName, statValue], i}
+          {#if i < 3}
+            <StatBar {statName} {statValue} />
+          {/if}
+        {/each}
+      </div>
+      <div>
+        {#each Object.entries(pokemon["base stats"]) as [statName, statValue], i}
+          {#if i >= 3}
+            <StatBar {statName} {statValue} />
+          {/if}
+        {/each}
+      </div>
     </div>
   </div>
 </div>
@@ -75,9 +84,15 @@
   }
 
   .stats {
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 25px;
-    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 472px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
