@@ -8,7 +8,7 @@
   let width;
   $: {
     let tileGridWidthRounded = Math.floor(tileGridWidth / 110) * 100 - 10;
-    width = ((tileGridWidthRounded / tileGridWidth) * 110).toString() + "%";
+    width = ((tileGridWidthRounded / tileGridWidth) * 110.1).toString() + "%";
   }
 </script>
 
